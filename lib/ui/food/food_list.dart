@@ -64,18 +64,35 @@ class _FoodListState extends State<FoodList> {
         ),
         child: Column(
           children: [
-            Text('Break Fast',
-              style: TextStyle(
-                  fontSize: 10.0,
-                  color: Colors.grey.withOpacity(0.5),
-                  fontWeight: FontWeight.bold
-              ),),
-            Text('Light Food',
-              style: TextStyle(
-                fontSize: 10.0,
-                color: Colors.grey.withOpacity(0.5),
-                fontWeight: FontWeight.bold
-              ),),
+            Container(
+              height: 100.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(7.0),
+                image: DecorationImage(
+                  image: AssetImage(imgPath),
+                  fit: BoxFit.cover
+                )
+              ),
+            ),
+            const SizedBox(height: 10.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text('Break Fast',
+                  style: TextStyle(
+                      fontSize: 10.0,
+                      color: Colors.grey.withOpacity(0.5),
+                      fontWeight: FontWeight.bold
+                  ),),
+                const SizedBox(width: 7.0,),
+                Text('Light Food',
+                  style: TextStyle(
+                      fontSize: 10.0,
+                      color: Colors.grey.withOpacity(0.5),
+                      fontWeight: FontWeight.bold
+                  ),),
+              ],
+            ),
             const SizedBox(height: 10.0,),
             Padding(
               padding: const EdgeInsets.only(left: 15.0),
